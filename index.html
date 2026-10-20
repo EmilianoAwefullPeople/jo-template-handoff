@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Journey Onward · Template Handoff</title>
+  <meta name="description" content="Engineering specs for every Journey Onward graphic template: postcards, stickers and trip recap slides.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page">
+    <header class="masthead">
+      <p class="kicker">Journey Onward · Template Handoff</p>
+      <h1>Template Handoff</h1>
+      <p class="sub">Every graphic template, with the engineering spec to build it: the Figma design, the data it needs, where that data comes from, and the rules for auto-generation.</p>
+      <p class="updated" id="updated"></p>
+      <p class="tracker-link"><a id="trackerLink" href="#" target="_blank" rel="noopener">See Regina's design tracker →</a></p>
+    </header>
+
+    <details class="readfirst" id="readFirst" open>
+      <summary>Read first: foundational rules and the ready-for-dev checklist</summary>
+      <div class="readfirst-body">
+        <div class="readfirst-col">
+          <h3>Rules that apply to every template</h3>
+          <ol class="rules" id="rulesList"></ol>
+        </div>
+        <div class="readfirst-col">
+          <h3>Definition of ready-for-dev</h3>
+          <ul class="checklist" id="checklistList"></ul>
+        </div>
+      </div>
+    </details>
+
+    <section class="summarybar" id="summaryBar" aria-label="Status summary"></section>
+
+    <nav class="toolbar" aria-label="Filters">
+      <div class="tabs" id="statusTabs" role="tablist"></div>
+      <div class="toolbar-right">
+        <select class="select" id="groupFilter" aria-label="Filter by group"></select>
+        <select class="select" id="typeFilter" aria-label="Filter by type"></select>
+        <label class="search">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"/><path d="M13 13l4 4"/></svg>
+          <input type="search" id="search" placeholder="Search templates" autocomplete="off">
+        </label>
+      </div>
+    </nav>
+
+    <main id="content"></main>
+
+    <footer class="footer">
+      <div class="export-row">
+        <a id="jsonLink" href="templates.json" target="_blank" rel="noopener">templates.json</a>
+        <button id="downloadJson">Download templates.json</button>
+      </div>
+      <h3>Changelog</h3>
+      <ul class="changelog" id="changelogList"></ul>
+      <p class="footer-credit">Journey Onward · AweFull People</p>
+    </footer>
+  </div>
+
+  <dialog id="detail" aria-labelledby="detailTitle">
+    <button class="close" id="closeDetail" aria-label="Close">×</button>
+    <div class="detail-grid">
+      <div class="detail-media" id="detailMedia"></div>
+      <div class="detail-info">
+        <div class="detail-head">
+          <div>
+            <p class="detail-id" id="detailId"></p>
+            <h2 id="detailTitle"></h2>
+          </div>
+          <button class="copy-btn" id="copySpec">Copy spec for Claude Code</button>
+        </div>
+        <dl class="props">
+          <dt>Status</dt><dd id="detailStatus"></dd>
+          <dt>Group</dt><dd id="detailGroup"></dd>
+          <dt>Type</dt><dd id="detailType"></dd>
+          <dt>Sizes</dt><dd id="detailSizes"></dd>
+          <dt>Tracker</dt><dd id="detailTracker"></dd>
+        </dl>
+
+        <div id="detailBody"></div>
+
+        <div class="detail-nav">
+          <button id="prevItem">← Previous</button>
+          <button id="nextItem">Next →</button>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
