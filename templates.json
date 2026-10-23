@@ -1870,14 +1870,18 @@
           "name": "Landmark found",
           "figmaNode": "165:203",
           "figmaUrl": "https://www.figma.com/design/V8t4i8uY54selKjJbYsa0t/JO-Regina-Templates?node-id=165-203",
-          "preview": "assets/previews/13-2x3-landmark.jpg"
+          "preview": "assets/previews/13-2x3-landmark.jpg",
+          "figmaNode9x16": "184:667",
+          "figmaUrl9x16": "https://www.figma.com/design/V8t4i8uY54selKjJbYsa0t/JO-Regina-Templates?node-id=184-667"
         },
         {
           "id": "B",
           "name": "No landmark",
           "figmaNode": "177:592",
           "figmaUrl": "https://www.figma.com/design/V8t4i8uY54selKjJbYsa0t/JO-Regina-Templates?node-id=177-592",
-          "preview": "assets/previews/13-2x3-no-landmark.jpg"
+          "preview": "assets/previews/13-2x3-no-landmark.jpg",
+          "figmaNode9x16": "184:680",
+          "figmaUrl9x16": "https://www.figma.com/design/V8t4i8uY54selKjJbYsa0t/JO-Regina-Templates?node-id=184-680"
         }
       ],
       "previews": [
@@ -2077,14 +2081,18 @@
           "name": "One photo",
           "figmaNode": "165:214",
           "figmaUrl": "https://www.figma.com/design/V8t4i8uY54selKjJbYsa0t/JO-Regina-Templates?node-id=165-214",
-          "preview": "assets/previews/18-2x3-v1.jpg"
+          "preview": "assets/previews/18-2x3-v1.jpg",
+          "figmaNode9x16": "184:958",
+          "figmaUrl9x16": "https://www.figma.com/design/V8t4i8uY54selKjJbYsa0t/JO-Regina-Templates?node-id=184-958"
         },
         {
           "id": "v2",
           "name": "2x2 grid, 4 photos",
           "figmaNode": "167:471",
           "figmaUrl": "https://www.figma.com/design/V8t4i8uY54selKjJbYsa0t/JO-Regina-Templates?node-id=167-471",
-          "preview": "assets/previews/18-2x3-v2.jpg"
+          "preview": "assets/previews/18-2x3-v2.jpg",
+          "figmaNode9x16": "184:1005",
+          "figmaUrl9x16": "https://www.figma.com/design/V8t4i8uY54selKjJbYsa0t/JO-Regina-Templates?node-id=184-1005"
         }
       ],
       "previews": [
@@ -2542,21 +2550,27 @@
           "name": "Round",
           "figmaNode": "165:239",
           "figmaUrl": "https://www.figma.com/design/V8t4i8uY54selKjJbYsa0t/JO-Regina-Templates?node-id=165-239",
-          "preview": "assets/previews/27-2x3-round.jpg"
+          "preview": "assets/previews/27-2x3-round.jpg",
+          "figmaNode9x16": "184:1091",
+          "figmaUrl9x16": "https://www.figma.com/design/V8t4i8uY54selKjJbYsa0t/JO-Regina-Templates?node-id=184-1091"
         },
         {
           "id": "rectangle",
           "name": "Rectangle",
           "figmaNode": "182:436",
           "figmaUrl": "https://www.figma.com/design/V8t4i8uY54selKjJbYsa0t/JO-Regina-Templates?node-id=182-436",
-          "preview": "assets/previews/27-2x3-rectangle.jpg"
+          "preview": "assets/previews/27-2x3-rectangle.jpg",
+          "figmaNode9x16": "184:1146",
+          "figmaUrl9x16": "https://www.figma.com/design/V8t4i8uY54selKjJbYsa0t/JO-Regina-Templates?node-id=184-1146"
         },
         {
           "id": "oval",
           "name": "Oval",
           "figmaNode": "182:442",
           "figmaUrl": "https://www.figma.com/design/V8t4i8uY54selKjJbYsa0t/JO-Regina-Templates?node-id=182-442",
-          "preview": "assets/previews/27-2x3-oval.jpg"
+          "preview": "assets/previews/27-2x3-oval.jpg",
+          "figmaNode9x16": "184:1155",
+          "figmaUrl9x16": "https://www.figma.com/design/V8t4i8uY54selKjJbYsa0t/JO-Regina-Templates?node-id=184-1155"
         }
       ],
       "previews": [
@@ -3036,14 +3050,18 @@
           "name": "Cream texture, landscape window",
           "figmaNode": "94:3",
           "figmaUrl": "https://www.figma.com/design/V8t4i8uY54selKjJbYsa0t/JO-Regina-Templates?node-id=94-3",
-          "preview": "assets/previews/16-2x3-v1.jpg"
+          "preview": "assets/previews/16-2x3-v1.jpg",
+          "figmaNode9x16": "184:704",
+          "figmaUrl9x16": "https://www.figma.com/design/V8t4i8uY54selKjJbYsa0t/JO-Regina-Templates?node-id=184-704"
         },
         {
           "id": "v2",
           "name": "Dark texture, square window, globe icon",
           "figmaNode": "94:16",
           "figmaUrl": "https://www.figma.com/design/V8t4i8uY54selKjJbYsa0t/JO-Regina-Templates?node-id=94-16",
-          "preview": "assets/previews/16-2x3-v2.jpg"
+          "preview": "assets/previews/16-2x3-v2.jpg",
+          "figmaNode9x16": "184:717",
+          "figmaUrl9x16": "https://www.figma.com/design/V8t4i8uY54selKjJbYsa0t/JO-Regina-Templates?node-id=184-717"
         }
       ],
       "previews": [
@@ -3230,21 +3248,27 @@
           "name": "Stony Island",
           "figmaNode": "94:31",
           "figmaUrl": "https://www.figma.com/design/V8t4i8uY54selKjJbYsa0t/JO-Regina-Templates?node-id=94-31",
-          "preview": "assets/previews/17-2x3-v1.jpg"
+          "preview": "assets/previews/17-2x3-v1.jpg",
+          "figmaNode9x16": "184:731",
+          "figmaUrl9x16": "https://www.figma.com/design/V8t4i8uY54selKjJbYsa0t/JO-Regina-Templates?node-id=184-731"
         },
         {
           "id": "v2",
           "name": "SCHABO",
           "figmaNode": "94:38",
           "figmaUrl": "https://www.figma.com/design/V8t4i8uY54selKjJbYsa0t/JO-Regina-Templates?node-id=94-38",
-          "preview": "assets/previews/17-2x3-v2.jpg"
+          "preview": "assets/previews/17-2x3-v2.jpg",
+          "figmaNode9x16": "184:737",
+          "figmaUrl9x16": "https://www.figma.com/design/V8t4i8uY54selKjJbYsa0t/JO-Regina-Templates?node-id=184-737"
         },
         {
           "id": "v3",
           "name": "Mr Palker",
           "figmaNode": "94:45",
           "figmaUrl": "https://www.figma.com/design/V8t4i8uY54selKjJbYsa0t/JO-Regina-Templates?node-id=94-45",
-          "preview": "assets/previews/17-2x3-v3.jpg"
+          "preview": "assets/previews/17-2x3-v3.jpg",
+          "figmaNode9x16": "184:743",
+          "figmaUrl9x16": "https://www.figma.com/design/V8t4i8uY54selKjJbYsa0t/JO-Regina-Templates?node-id=184-743"
         }
       ],
       "previews": [
@@ -3777,21 +3801,27 @@
           "name": "5 photos",
           "figmaNode": "130:50",
           "figmaUrl": "https://www.figma.com/design/V8t4i8uY54selKjJbYsa0t/JO-Regina-Templates?node-id=130-50",
-          "preview": "assets/previews/09-2x3-5photos.jpg"
+          "preview": "assets/previews/09-2x3-5photos.jpg",
+          "figmaNode9x16": "184:596",
+          "figmaUrl9x16": "https://www.figma.com/design/V8t4i8uY54selKjJbYsa0t/JO-Regina-Templates?node-id=184-596"
         },
         {
           "id": "6photos",
           "name": "6 photos",
           "figmaNode": "130:66",
           "figmaUrl": "https://www.figma.com/design/V8t4i8uY54selKjJbYsa0t/JO-Regina-Templates?node-id=130-66",
-          "preview": "assets/previews/09-2x3-6photos.jpg"
+          "preview": "assets/previews/09-2x3-6photos.jpg",
+          "figmaNode9x16": "184:608",
+          "figmaUrl9x16": "https://www.figma.com/design/V8t4i8uY54selKjJbYsa0t/JO-Regina-Templates?node-id=184-608"
         },
         {
           "id": "7photos",
           "name": "7 photos",
           "figmaNode": "91:3",
           "figmaUrl": "https://www.figma.com/design/V8t4i8uY54selKjJbYsa0t/JO-Regina-Templates?node-id=91-3",
-          "preview": "assets/previews/09-2x3-7photos.jpg"
+          "preview": "assets/previews/09-2x3-7photos.jpg",
+          "figmaNode9x16": "184:580",
+          "figmaUrl9x16": "https://www.figma.com/design/V8t4i8uY54selKjJbYsa0t/JO-Regina-Templates?node-id=184-580"
         }
       ],
       "previews": [
@@ -4414,14 +4444,18 @@
           "name": "Square polaroids",
           "figmaNode": "95:18",
           "figmaUrl": "https://www.figma.com/design/V8t4i8uY54selKjJbYsa0t/JO-Regina-Templates?node-id=95-18",
-          "preview": "assets/previews/21-2x3-v1.jpg"
+          "preview": "assets/previews/21-2x3-v1.jpg",
+          "figmaNode9x16": "184:756",
+          "figmaUrl9x16": "https://www.figma.com/design/V8t4i8uY54selKjJbYsa0t/JO-Regina-Templates?node-id=184-756"
         },
         {
           "id": "v2",
           "name": "Landscape polaroids",
           "figmaNode": "95:26",
           "figmaUrl": "https://www.figma.com/design/V8t4i8uY54selKjJbYsa0t/JO-Regina-Templates?node-id=95-26",
-          "preview": "assets/previews/21-2x3-v2.jpg"
+          "preview": "assets/previews/21-2x3-v2.jpg",
+          "figmaNode9x16": "184:764",
+          "figmaUrl9x16": "https://www.figma.com/design/V8t4i8uY54selKjJbYsa0t/JO-Regina-Templates?node-id=184-764"
         }
       ],
       "previews": [
@@ -5148,56 +5182,72 @@
           "name": "Sunny",
           "figmaNode": "130:137",
           "figmaUrl": "https://www.figma.com/design/V8t4i8uY54selKjJbYsa0t/JO-Regina-Templates?node-id=130-137",
-          "preview": "assets/previews/26-all-states.jpg"
+          "preview": "assets/previews/26-all-states.jpg",
+          "figmaNode9x16": "184:846",
+          "figmaUrl9x16": "https://www.figma.com/design/V8t4i8uY54selKjJbYsa0t/JO-Regina-Templates?node-id=184-846"
         },
         {
           "id": "partly_cloudy",
           "name": "Partly Cloudy",
           "figmaNode": "130:126",
           "figmaUrl": "https://www.figma.com/design/V8t4i8uY54selKjJbYsa0t/JO-Regina-Templates?node-id=130-126",
-          "preview": "assets/previews/26-all-states.jpg"
+          "preview": "assets/previews/26-all-states.jpg",
+          "figmaNode9x16": "184:835",
+          "figmaUrl9x16": "https://www.figma.com/design/V8t4i8uY54selKjJbYsa0t/JO-Regina-Templates?node-id=184-835"
         },
         {
           "id": "cloudy",
           "name": "Cloudy",
           "figmaNode": "130:83",
           "figmaUrl": "https://www.figma.com/design/V8t4i8uY54selKjJbYsa0t/JO-Regina-Templates?node-id=130-83",
-          "preview": "assets/previews/26-all-states.jpg"
+          "preview": "assets/previews/26-all-states.jpg",
+          "figmaNode9x16": "184:792",
+          "figmaUrl9x16": "https://www.figma.com/design/V8t4i8uY54selKjJbYsa0t/JO-Regina-Templates?node-id=184-792"
         },
         {
           "id": "rainy",
           "name": "Rainy",
           "figmaNode": "130:91",
           "figmaUrl": "https://www.figma.com/design/V8t4i8uY54selKjJbYsa0t/JO-Regina-Templates?node-id=130-91",
-          "preview": "assets/previews/26-all-states.jpg"
+          "preview": "assets/previews/26-all-states.jpg",
+          "figmaNode9x16": "184:800",
+          "figmaUrl9x16": "https://www.figma.com/design/V8t4i8uY54selKjJbYsa0t/JO-Regina-Templates?node-id=184-800"
         },
         {
           "id": "storm",
           "name": "Storm",
           "figmaNode": "130:118",
           "figmaUrl": "https://www.figma.com/design/V8t4i8uY54selKjJbYsa0t/JO-Regina-Templates?node-id=130-118",
-          "preview": "assets/previews/26-all-states.jpg"
+          "preview": "assets/previews/26-all-states.jpg",
+          "figmaNode9x16": "184:827",
+          "figmaUrl9x16": "https://www.figma.com/design/V8t4i8uY54selKjJbYsa0t/JO-Regina-Templates?node-id=184-827"
         },
         {
           "id": "snowing",
           "name": "Snowing",
           "figmaNode": "130:145",
           "figmaUrl": "https://www.figma.com/design/V8t4i8uY54selKjJbYsa0t/JO-Regina-Templates?node-id=130-145",
-          "preview": "assets/previews/26-all-states.jpg"
+          "preview": "assets/previews/26-all-states.jpg",
+          "figmaNode9x16": "184:854",
+          "figmaUrl9x16": "https://www.figma.com/design/V8t4i8uY54selKjJbYsa0t/JO-Regina-Templates?node-id=184-854"
         },
         {
           "id": "clear_night",
           "name": "Clear Night",
           "figmaNode": "130:99",
           "figmaUrl": "https://www.figma.com/design/V8t4i8uY54selKjJbYsa0t/JO-Regina-Templates?node-id=130-99",
-          "preview": "assets/previews/26-all-states.jpg"
+          "preview": "assets/previews/26-all-states.jpg",
+          "figmaNode9x16": "184:808",
+          "figmaUrl9x16": "https://www.figma.com/design/V8t4i8uY54selKjJbYsa0t/JO-Regina-Templates?node-id=184-808"
         },
         {
           "id": "cloudy_night",
           "name": "Cloudy Night",
           "figmaNode": "130:107",
           "figmaUrl": "https://www.figma.com/design/V8t4i8uY54selKjJbYsa0t/JO-Regina-Templates?node-id=130-107",
-          "preview": "assets/previews/26-all-states.jpg"
+          "preview": "assets/previews/26-all-states.jpg",
+          "figmaNode9x16": "184:816",
+          "figmaUrl9x16": "https://www.figma.com/design/V8t4i8uY54selKjJbYsa0t/JO-Regina-Templates?node-id=184-816"
         }
       ],
       "previews": [
@@ -5418,14 +5468,18 @@
           "name": "Paper top",
           "figmaNode": "95:43",
           "figmaUrl": "https://www.figma.com/design/V8t4i8uY54selKjJbYsa0t/JO-Regina-Templates?node-id=95-43",
-          "preview": "assets/previews/24-2x3-v1.jpg"
+          "preview": "assets/previews/24-2x3-v1.jpg",
+          "figmaNode9x16": "184:778",
+          "figmaUrl9x16": "https://www.figma.com/design/V8t4i8uY54selKjJbYsa0t/JO-Regina-Templates?node-id=184-778"
         },
         {
           "id": "v2",
           "name": "Black top",
           "figmaNode": "95:48",
           "figmaUrl": "https://www.figma.com/design/V8t4i8uY54selKjJbYsa0t/JO-Regina-Templates?node-id=95-48",
-          "preview": "assets/previews/24-2x3-v2.jpg"
+          "preview": "assets/previews/24-2x3-v2.jpg",
+          "figmaNode9x16": "184:785",
+          "figmaUrl9x16": "https://www.figma.com/design/V8t4i8uY54selKjJbYsa0t/JO-Regina-Templates?node-id=184-785"
         }
       ],
       "previews": [

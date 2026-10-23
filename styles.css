@@ -238,6 +238,7 @@ h1 {
 .variant-card img { width: 100%; border-radius: 6px; aspect-ratio: 2/3; object-fit: cover; }
 .variant-name { font-size: 12px; font-weight: 600; }
 .variant-card a { font-size: 12px; }
+.variant-links { display: flex; flex-direction: column; gap: 2px; }
 
 .asset-list { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
 .asset-list li { display: flex; flex-direction: column; }

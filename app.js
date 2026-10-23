@@ -226,7 +226,10 @@
         <div class="variant-card">
           ${v.preview ? `<img src="${esc(v.preview)}" alt="${esc(v.name)}">` : ""}
           <span class="variant-name">${esc(v.id)} · ${esc(v.name)}</span>
-          ${v.figmaUrl ? `<a href="${esc(v.figmaUrl)}" target="_blank" rel="noopener">Open in Figma →</a>` : ""}
+          <span class="variant-links">
+            ${v.figmaUrl ? `<a href="${esc(v.figmaUrl)}" target="_blank" rel="noopener">2:3 in Figma →</a>` : ""}
+            ${v.figmaUrl9x16 ? `<a href="${esc(v.figmaUrl9x16)}" target="_blank" rel="noopener">9:16 in Figma →</a>` : ""}
+          </span>
         </div>`).join("")}</div>`;
     }
 
