@@ -2192,7 +2192,7 @@
             "minSize": 16,
             "lineHeight": "",
             "case": "UPPERCASE",
-            "color": "#7A8794"
+            "color": "#1C2B3A"
           }
         }
       ],
@@ -2219,6 +2219,7 @@
         }
       ],
       "rendering": [
+        "season position: 112,90 (Inter Bold 16, #1C2B3A).",
         "TRAVEL\\nMEMORIES static, Inter Bold 16 tracking+8% #7A8794 at 112,44.",
         "Dashed perforation at y 338 (#C9D3DC, 2px, dash 8/8).",
         "Labels DATE (24,356) and COUNTRY (178,356), Inter Medium 14 tracking+8% #7A8794.",
@@ -2485,6 +2486,7 @@
       ],
       "blockers": [],
       "followUps": [
+        "Swap stand-in fonts for the licensed real fonts",
         "QR link may change"
       ],
       "openQuestions": []
@@ -2651,13 +2653,13 @@
           "example": "MEMORIES FROM WINTER",
           "filledBy": "software",
           "source": "stage1a.season, else year",
-          "constraints": "UPPERCASE. Without a season the line reads MEMORIES FROM {YEAR}.",
+          "constraints": "UPPERCASE. Without a season the line reads MEMORIES FROM {YEAR}. Round: 19px, twice around the ring. Oval: 20px, tracking +10%. Not shown on the rectangle variant (which uses the static ARRIVED line instead).",
           "aiGuidance": null,
           "safetyNet": null,
           "fallback": "",
           "render": {
             "font": "Cousine Bold",
-            "maxSize": 30,
+            "maxSize": 20,
             "minSize": 19,
             "lineHeight": "",
             "case": "UPPERCASE",
@@ -2712,9 +2714,7 @@
         }
       ],
       "blockers": [],
-      "followUps": [
-        "Swap stand-in fonts for the licensed real fonts"
-      ],
+      "followUps": [],
       "openQuestions": []
     },
     {
@@ -3063,13 +3063,13 @@
           "example": "Zurich",
           "filledBy": "software",
           "source": "stage1.place.locality, else stage1.place.country",
-          "constraints": "As stored.",
+          "constraints": "As stored. v1: max 209/min 140px. v2: max 249/min 160px (different variant, see rendering).",
           "aiGuidance": null,
           "safetyNet": null,
           "fallback": "",
           "render": {
             "font": "v1: Gothiks (dev stand-in Antonio Regular) · v2: Chiroto, must be replaced (dev stand-in Antonio Bold)",
-            "maxSize": 249,
+            "maxSize": 209,
             "minSize": 140,
             "lineHeight": "",
             "case": "as stored",
@@ -3082,13 +3082,13 @@
           "example": "13:00:45",
           "filledBy": "software",
           "source": "photo.capture_time",
-          "constraints": "Format HH:MM:SS, 24h.",
+          "constraints": "Format HH:MM:SS, 24h. v1: 63px fixed. v2: 105px fixed (different variant, see rendering).",
           "aiGuidance": null,
           "safetyNet": null,
           "fallback": "",
           "render": {
             "font": "Arial (dev stand-in Arimo)",
-            "maxSize": 105,
+            "maxSize": 63,
             "minSize": 63,
             "lineHeight": "",
             "case": "",
@@ -3101,13 +3101,13 @@
           "example": "15/01/2026",
           "filledBy": "software",
           "source": "photo.capture_date",
-          "constraints": "v1 format DD/MM/YYYY. v2 format YYYY-MM-DD.",
+          "constraints": "v1 format DD/MM/YYYY. v2 format YYYY-MM-DD. v1: 64px fixed. v2: 110px fixed (different variant, see rendering).",
           "aiGuidance": null,
           "safetyNet": null,
           "fallback": "",
           "render": {
             "font": "Arial (dev stand-in Arimo)",
-            "maxSize": 110,
+            "maxSize": 64,
             "minSize": 64,
             "lineHeight": "",
             "case": "",
@@ -3265,14 +3265,14 @@
           "example": "ZURICH",
           "filledBy": "software",
           "source": "stage1.place.locality, else stage1.place.country",
-          "constraints": "UPPERCASE.",
+          "constraints": "UPPERCASE. v1: max 913/min 600px. v2: max 394/min 260px. v3: max 431/min 280px (different variants, see rendering).",
           "aiGuidance": null,
           "safetyNet": null,
           "fallback": "No place: not eligible.",
           "render": {
             "font": "v1 Stony Island (dev Six Caps) · v2 SCHABO (dev Bebas Neue) · v3 Mr Palker (dev Big Shoulders Display Black)",
             "maxSize": 913,
-            "minSize": 260,
+            "minSize": 600,
             "lineHeight": "",
             "case": "UPPERCASE",
             "color": "computed from photo, see colorRule"
@@ -4334,7 +4334,9 @@
         }
       ],
       "blockers": [],
-      "followUps": [],
+      "followUps": [
+        "Swap stand-in fonts for the licensed real fonts"
+      ],
       "openQuestions": []
     },
     {
@@ -4838,6 +4840,7 @@
       ],
       "blockers": [],
       "followUps": [
+        "Swap stand-in fonts for the licensed real fonts",
         "QR link may change"
       ],
       "openQuestions": []
@@ -5085,6 +5088,7 @@
       ],
       "blockers": [],
       "followUps": [
+        "Swap stand-in fonts for the licensed real fonts",
         "QR link may change"
       ],
       "openQuestions": []
@@ -5232,14 +5236,14 @@
           "example": "18°",
           "filledBy": "software",
           "source": "stage1a.weather.temperature",
-          "constraints": "Whole degrees with unit symbol (3.3).",
+          "constraints": "Whole degrees with unit symbol (3.3). One-line states: shares the combined \"{temperature}  {CONDITION}\" shrink range (max 53/min 40). Two-line states (partly_cloudy, cloudy_night): fixed 51px, see rendering.",
           "aiGuidance": null,
           "safetyNet": null,
           "fallback": "",
           "render": {
             "font": "Clash Display Medium (dev Hanken Grotesk Medium)",
             "maxSize": 53,
-            "minSize": 51,
+            "minSize": 40,
             "lineHeight": "",
             "case": "",
             "color": "see table"
@@ -5251,14 +5255,14 @@
           "example": "CLOUDY",
           "filledBy": "software",
           "source": "derived from state",
-          "constraints": "UPPERCASE state label.",
+          "constraints": "UPPERCASE state label. One-line states: shares the combined \"{temperature}  {CONDITION}\" shrink range (max 53/min 40). Two-line states (partly_cloudy, cloudy_night): fixed 58px over 2 lines, see rendering.",
           "aiGuidance": null,
           "safetyNet": null,
           "fallback": "",
           "render": {
             "font": "Clash Display Medium (dev Hanken Grotesk Medium)",
-            "maxSize": 58,
-            "minSize": 53,
+            "maxSize": 53,
+            "minSize": 40,
             "lineHeight": "",
             "case": "UPPERCASE",
             "color": "see table"
@@ -5338,7 +5342,9 @@
         }
       ],
       "blockers": [],
-      "followUps": [],
+      "followUps": [
+        "Swap stand-in fonts for the licensed real fonts"
+      ],
       "openQuestions": []
     },
     {
@@ -5632,6 +5638,7 @@
       ],
       "blockers": [],
       "followUps": [
+        "Swap stand-in fonts for the licensed real fonts",
         "Final handwriting font"
       ],
       "openQuestions": []
@@ -5885,7 +5892,9 @@
         }
       ],
       "blockers": [],
-      "followUps": [],
+      "followUps": [
+        "Swap stand-in fonts for the licensed real fonts"
+      ],
       "openQuestions": []
     },
     {
