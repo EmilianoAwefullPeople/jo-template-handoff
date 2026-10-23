@@ -2739,7 +2739,7 @@
       "type": "sticker-overlay",
       "status": "ready-for-dev",
       "family": "B",
-      "summary": "A location pill in the app's style, with a pin icon, city and country, ringed by the Aura gradient.",
+      "summary": "A location pill in the app's style, with a pin icon, city and country, ringed by the Aura gradient. Two versions: dark and light.",
       "outputSizes": [
         {
           "label": "2:3",
@@ -2767,26 +2767,42 @@
             "what": "0,0,1080,1620"
           },
           {
-            "name": "sticker_dark",
-            "what": "Node 81:5"
-          },
-          {
-            "name": "sticker_light",
-            "what": "Node 81:13"
-          },
-          {
-            "name": "pill",
-            "what": "117,106, height 111, width hugs content (padding 48 left, 56 right), corner radius 55.5"
+            "name": "sticker (pill, one per version)",
+            "what": "117,106, height 111, width hugs content (padding 48 left, 56 right), corner radius 55.5. Each version (dark, light) is its own frame, not a layer swap within one frame."
           },
           {
             "name": "pin icon",
             "what": "Vector, 43x70, 48px from the pill's left, vertically centered"
+          },
+          {
+            "name": "location_label",
+            "what": "Text, 24px after the icon"
           }
         ]
       },
-      "variants": [],
+      "variants": [
+        {
+          "id": "dark",
+          "name": "Dark",
+          "figmaNode": "81:3",
+          "figmaUrl": "https://www.figma.com/design/V8t4i8uY54selKjJbYsa0t/JO-Regina-Templates?node-id=81-3",
+          "figmaNode9x16": "184:692",
+          "figmaUrl9x16": "https://www.figma.com/design/V8t4i8uY54selKjJbYsa0t/JO-Regina-Templates?node-id=184-692",
+          "preview": "assets/previews/28-2x3-dark.jpg"
+        },
+        {
+          "id": "light",
+          "name": "Light",
+          "figmaNode": "193:392",
+          "figmaUrl": "https://www.figma.com/design/V8t4i8uY54selKjJbYsa0t/JO-Regina-Templates?node-id=193-392",
+          "figmaNode9x16": "193:404",
+          "figmaUrl9x16": "https://www.figma.com/design/V8t4i8uY54selKjJbYsa0t/JO-Regina-Templates?node-id=193-404",
+          "preview": "assets/previews/28-2x3-light.jpg"
+        }
+      ],
       "previews": [
-        "assets/previews/28-2x3.jpg"
+        "assets/previews/28-2x3-dark.jpg",
+        "assets/previews/28-2x3-light.jpg"
       ],
       "photos": {
         "count": 1,
