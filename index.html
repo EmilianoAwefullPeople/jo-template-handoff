@@ -34,11 +34,46 @@
       </div>
     </details>
 
+    <details class="readfirst" id="moreRules">
+      <summary>More rules: building the set, picking photos, formatting, rendering, manual creation, families, priority (v0.3)</summary>
+      <div class="readfirst-body" id="moreRulesBody">
+        <div class="readfirst-col">
+          <h3>Building the postcard set</h3>
+          <ul class="checklist" id="setRulesList"></ul>
+        </div>
+        <div class="readfirst-col">
+          <h3>Picking photos</h3>
+          <ol class="rules" id="photoSelectionList"></ol>
+        </div>
+        <div class="readfirst-col">
+          <h3>Formatting</h3>
+          <ul class="checklist" id="formattingList"></ul>
+        </div>
+        <div class="readfirst-col">
+          <h3>Rendering (all templates)</h3>
+          <ul class="checklist" id="renderingRulesList"></ul>
+        </div>
+        <div class="readfirst-col">
+          <h3>Manual creation (Flow 3), shared rules</h3>
+          <ul class="checklist" id="manualRulesList"></ul>
+        </div>
+        <div class="readfirst-col">
+          <h3>Families</h3>
+          <ul class="checklist" id="familiesList"></ul>
+        </div>
+        <div class="readfirst-col" style="grid-column: 1 / -1">
+          <h3>Auto-generation priority, a note</h3>
+          <p class="muted" id="priorityNote"></p>
+        </div>
+      </div>
+    </details>
+
     <section class="summarybar" id="summaryBar" aria-label="Status summary"></section>
 
     <nav class="toolbar" aria-label="Filters">
       <div class="tabs" id="statusTabs" role="tablist"></div>
       <div class="toolbar-right">
+        <select class="select" id="familyFilter" aria-label="Filter by family"></select>
         <select class="select" id="groupFilter" aria-label="Filter by group"></select>
         <select class="select" id="typeFilter" aria-label="Filter by type"></select>
         <label class="search">

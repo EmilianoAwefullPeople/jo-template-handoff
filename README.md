@@ -18,9 +18,14 @@ jo-template-handoff/
 ├── app.js              # fetches templates.json and renders everything
 ├── templates.json       # SINGLE SOURCE OF TRUTH
 ├── assets/
-│   └── previews/       # PNG/JPG exports of each Figma frame, named <templateId>-<size>.png
+│   ├── previews/       # PNG/JPG exports of each Figma frame (2:3), one or more per template
+│   ├── overlays/       # fixed texture/glow/viewfinder overlay layers, full frame, with a blend mode
+│   ├── templates/<id>/ # per-template layer assets: backgrounds, frames, masks, QR codes, icons...
+│   └── 22/             # #22's exported assets (background, card art, stamp)
 └── README.md
 ```
+
+Since v0.3.0, templates can also have `family` (shared contracts in the top-level `families` array), `variants` (alternate designs of the same template, each with its own Figma node and preview), and `assets` (downloadable layer files with blend mode/opacity where relevant). Every ready-for-dev template has both a 2:3 and a 9:16 `outputSizes` entry, an `autoGeneration.priority` tier, and a final `manualCreation` contract (see the shared `manualCreationRules` at the top of the JSON for the rules common to every template).
 
 No build step, no framework. Vanilla HTML/CSS/JS.
 

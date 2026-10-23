@@ -15,7 +15,8 @@
   const FILLEDBY_LABEL = { ai: "AI", software: "Software", static: "Static", user: "User" };
 
   let DATA = null;
-  let state = { status: "all", group: "all", type: "all", query: "" };
+  let FAMILY_BY_ID = {};
+  let state = { status: "all", group: "all", type: "all", family: "all", query: "" };
   let visible = [];
   let openIndex = -1;
   let previewIndex = 0;
@@ -34,6 +35,16 @@
 
     $("rulesList").innerHTML = DATA.rules.map(r => `<li>${esc(r)}</li>`).join("");
     $("checklistList").innerHTML = DATA.readyForDevChecklist.map(c => `<li>${esc(c)}</li>`).join("");
+
+    (DATA.families || []).forEach(f => { FAMILY_BY_ID[f.id] = f; });
+    if ($("setRulesList")) $("setRulesList").innerHTML = (DATA.setRules || []).map(r => `<li>${esc(r)}</li>`).join("");
+    if ($("photoSelectionList")) $("photoSelectionList").innerHTML = (DATA.photoSelectionRules || []).map(r => `<li>${esc(r)}</li>`).join("");
+    if ($("formattingList")) $("formattingList").innerHTML = (DATA.formattingRules || []).map(r => `<li>${esc(r)}</li>`).join("");
+    if ($("renderingRulesList")) $("renderingRulesList").innerHTML = (DATA.renderingRules || []).map(r => `<li>${esc(r)}</li>`).join("");
+    if ($("manualRulesList")) $("manualRulesList").innerHTML = (DATA.manualCreationRules || []).map(r => `<li>${esc(r)}</li>`).join("");
+    if ($("familiesList")) $("familiesList").innerHTML = (DATA.families || []).map(f =>
+      `<li><strong>${esc(f.id)} · ${esc(f.name)}</strong>: ${esc(f.summary)}</li>`).join("");
+    if ($("priorityNote")) $("priorityNote").textContent = DATA.priorityNote || "";
 
     $("changelogList").innerHTML = DATA.changelog.map(c => `<li><strong>${esc(c.version)}</strong> (${formatDate(c.date)}) — ${esc(c.note)}</li>`).join("");
 
@@ -77,6 +88,11 @@
     const types = [...new Set(DATA.templates.map(t => t.type))].sort();
     $("typeFilter").innerHTML = `<option value="all">All types</option>` +
       types.map(t => `<option value="${esc(t)}">${esc(typeLabel(t))}</option>`).join("");
+    if ($("familyFilter")) {
+      const families = (DATA.families || []).filter(f => DATA.templates.some(t => t.family === f.id));
+      $("familyFilter").innerHTML = `<option value="all">All families</option>` +
+        families.map(f => `<option value="${esc(f.id)}">${esc(f.id)} · ${esc(f.name)}</option>`).join("");
+    }
   }
 
   function typeLabel(t) {
@@ -98,6 +114,7 @@
       cover = `<div class="cover placeholder"><div class="placeholder-inner"><div class="pid">${esc(label(d))}</div><div class="ptxt">No preview yet</div></div></div>`;
     }
     const sizes = (d.outputSizes || []).map(s => s.label).join(", ") || "—";
+    const fam = d.family && FAMILY_BY_ID[d.family];
     return `<button class="card" data-id="${esc(d.id)}">
       ${cover}
       <div class="card-body">
@@ -105,6 +122,7 @@
         <span class="card-name">${esc(d.name)}</span>
         <span class="card-meta">
           <span class="card-type">${esc(typeLabel(d.type))}</span>
+          ${fam ? `<span class="card-family">${esc(fam.id)} · ${esc(fam.name)}</span>` : ""}
           ${pill(d)}
         </span>
         ${flagCount ? `<span class="card-flags">${flagCount} blocker${flagCount > 1 ? "s" : ""}/follow-up${flagCount > 1 ? "s" : ""}</span>` : ""}
@@ -120,6 +138,7 @@
       (state.status === "all" || d.status === state.status) &&
       (state.group === "all" || d.group === state.group) &&
       (state.type === "all" || d.type === state.type) &&
+      (state.family === "all" || d.family === state.family) &&
       (!q || [d.id, label(d), d.name, d.type, d.summary || ""].join(" ").toLowerCase().includes(q))
     );
   }
@@ -194,6 +213,31 @@
 
     const overview = d.summary ? `<p>${esc(d.summary)}</p>` : "";
 
+    let family = "";
+    if (d.family && FAMILY_BY_ID[d.family]) {
+      const f = FAMILY_BY_ID[d.family];
+      family = `<p><strong>${esc(f.id)} · ${esc(f.name)}</strong></p><p>${esc(f.summary)}</p>` +
+        (f.sharedRules && f.sharedRules.length ? `<ul>${f.sharedRules.map(r => `<li>${esc(r)}</li>`).join("")}</ul>` : "");
+    }
+
+    let variants = "";
+    if (d.variants && d.variants.length) {
+      variants = `<div class="variant-grid">${d.variants.map(v => `
+        <div class="variant-card">
+          ${v.preview ? `<img src="${esc(v.preview)}" alt="${esc(v.name)}">` : ""}
+          <span class="variant-name">${esc(v.id)} · ${esc(v.name)}</span>
+          ${v.figmaUrl ? `<a href="${esc(v.figmaUrl)}" target="_blank" rel="noopener">Open in Figma →</a>` : ""}
+        </div>`).join("")}</div>`;
+    }
+
+    let assetsSec = "";
+    if (d.assets && d.assets.length) {
+      assetsSec = `<ul class="asset-list">${d.assets.map(a => `<li>
+        <a href="${esc(a.path)}" target="_blank" rel="noopener">${esc(a.path.split("/").pop())}</a>
+        <span class="muted">${esc(a.what)}${a.blendMode ? ` · ${esc(a.blendMode)}${a.opacity != null ? ` ${Math.round(a.opacity * 100)}%` : ""}` : ""}</span>
+      </li>`).join("")}</ul>`;
+    }
+
     let figma = "";
     if (d.figma) {
       figma = `<p><a href="${esc(d.figma.url)}" target="_blank" rel="noopener">Open Figma section →</a></p>` +
@@ -251,7 +295,10 @@
 
     let manual = "";
     if (d.manualCreation) {
+      const sharedRules = DATA.manualCreationRules || [];
       manual = `<p><strong>${d.manualCreation.final ? "Final" : "Preliminary, not final"}</strong></p>
+        ${sharedRules.length ? `<p class="muted">Shared manual-creation rules (apply to every template):</p><ul>${sharedRules.map(n => `<li>${esc(n)}</li>`).join("")}</ul>` : ""}
+        <p class="muted">This template:</p>
         <ul>${(d.manualCreation.notes || []).map(n => `<li>${esc(n)}</li>`).join("")}</ul>`;
     }
 
@@ -271,14 +318,17 @@
     }
 
     return sec("Overview", overview) +
+      sec("Family", family) +
       sec("Figma", figma) +
+      sec("Variants", variants) +
       sec("Previews", previews) +
       sec("Photo input", photos) +
       sec("Data contract", fields) +
       sec("Auto-generation", autoGen) +
       sec("Fallbacks", fallbacks) +
       sec("Rendering", rendering) +
-      (d.manualCreation ? sec("Manual creation (preliminary)", manual, "preliminary") : "") +
+      sec("Assets", assetsSec) +
+      (d.manualCreation ? sec("Manual creation", manual, d.manualCreation.final ? "" : "preliminary") : "") +
       sec("Engine dependencies", engineDeps) +
       sec("Blockers / follow-ups / open questions", flags);
   }
@@ -333,6 +383,7 @@
     });
     $("groupFilter").addEventListener("change", e => { state.group = e.target.value; renderContent(); });
     $("typeFilter").addEventListener("change", e => { state.type = e.target.value; renderContent(); });
+    if ($("familyFilter")) $("familyFilter").addEventListener("change", e => { state.family = e.target.value; renderContent(); });
     $("search").addEventListener("input", e => { state.query = e.target.value; renderContent(); });
 
     $("content").addEventListener("click", e => {
